@@ -34,7 +34,7 @@ endif
 
 BACKEND_FOLDER=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
-CODE_QUALITY_VERSION=2.0.2
+CODE_QUALITY_VERSION=2.1.0
 ifndef LOG_LEVEL
 	LOG_LEVEL=INFO
 endif
