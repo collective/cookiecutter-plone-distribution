@@ -1,0 +1,19 @@
+{
+  "portal": [
+    {
+      "email": "{{ cookiecutter.email }}",
+      "properties": {
+        "fullname": "{{ cookiecutter.distribution_title }}",
+        "location": "World"
+      },
+      "groups": [
+      ],
+      "roles": [
+        "Member"
+      ],
+      "username": "{{ cookiecutter.python_package_name }}"
+    }
+  ],
+    "team": [
+  ]
+}

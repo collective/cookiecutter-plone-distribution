@@ -1,0 +1,5 @@
+graft src/{{ cookiecutter.github_organization }}
+graft docs
+graft tests
+include *.md
+global-exclude *.pyc
