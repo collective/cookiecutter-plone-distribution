@@ -1,4 +1,4 @@
-name: Plone Starter CI
+name: Plone Distribution CI
 on: [push]
 
 jobs:
