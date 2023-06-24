@@ -32,8 +32,8 @@ bin/cookiecutter: ## Create virtualenv and install dependencies
 .PHONY: format
 format: bin/cookiecutter ## Format code
 	@echo "$(GREEN)==> Formatting codebase $(RESET)"
-	bin/black local_extensions tests
-	bin/isort local_extensions tests
+	bin/black hooks local_extensions tests
+	bin/isort hooks local_extensions tests
 
 .PHONY: generate
 generate: bin/cookiecutter ## Create a sample package

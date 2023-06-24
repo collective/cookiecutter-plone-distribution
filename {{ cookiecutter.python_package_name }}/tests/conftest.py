@@ -1,8 +1,9 @@
-from {{ cookiecutter.python_package_name }}.testing import ACCEPTANCE_TESTING
-from {{ cookiecutter.python_package_name }}.testing import FUNCTIONAL_TESTING
-from {{ cookiecutter.python_package_name }}.testing import INTEGRATION_TESTING
 from pytest_plone import fixtures_factory
-
+from {{cookiecutter.python_package_name}}.testing import (
+    ACCEPTANCE_TESTING,
+    FUNCTIONAL_TESTING,
+    INTEGRATION_TESTING,
+)
 
 pytest_plugins = ["pytest_plone"]
 

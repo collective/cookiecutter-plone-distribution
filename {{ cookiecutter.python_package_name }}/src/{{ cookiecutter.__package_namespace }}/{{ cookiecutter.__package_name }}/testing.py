@@ -1,15 +1,16 @@
+import {{ cookiecutter.python_package_name }}
 from plone.app.contenttypes.testing import PLONE_APP_CONTENTTYPES_FIXTURE
 from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
-from plone.app.testing import applyProfile
-from plone.app.testing import FunctionalTesting
-from plone.app.testing import IntegrationTesting
-from plone.app.testing import PloneSandboxLayer
+from plone.app.testing import (
+    FunctionalTesting,
+    IntegrationTesting,
+    PloneSandboxLayer,
+    applyProfile,
+)
 from plone.testing.zope import WSGI_SERVER_FIXTURE
 
-import {{ cookiecutter.python_package_name }}
 
-
-class {{ cookiecutter.__python_package_name_upper }}Layer(PloneSandboxLayer):
+class Layer(PloneSandboxLayer):
 
     defaultBases = (PLONE_APP_CONTENTTYPES_FIXTURE,)
 
@@ -24,10 +25,9 @@ class {{ cookiecutter.__python_package_name_upper }}Layer(PloneSandboxLayer):
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, "{{ cookiecutter.python_package_name }}:default")
-        applyProfile(portal, "{{ cookiecutter.python_package_name }}:initial")
 
 
-FIXTURE = {{ cookiecutter.__python_package_name_upper }}Layer()
+FIXTURE = Layer()
 
 
 INTEGRATION_TESTING = IntegrationTesting(

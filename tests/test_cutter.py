@@ -27,7 +27,7 @@ def test_variable_substitution(cutter_result):
     """Check if no file was unprocessed."""
     paths = build_files_list(cutter_result.project_path)
     for path in paths:
-        for line in open(path, "r"):
+        for line in open(path):
             match = RE_OBJ.search(line)
             msg = f"cookiecutter variable not replaced in {path}"
             assert match is None, msg
