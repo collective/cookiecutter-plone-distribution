@@ -3,6 +3,12 @@
   "description": "Plone Distribution.",
   "github_organization": "collective",
   "python_package_name": "{{ cookiecutter.github_organization|lower }}.{{ cookiecutter.distribution_title|replace(' ', '')|replace('-', '_')|replace('.', '')|lower }}",
+  "default_language": [
+    "en",
+    "de",
+    "es",
+    "pt_BR"
+  ],
   "author": "Plone Foundation",
   "email": "collective@plone.org",
   "__package_name": "{{ cookiecutter.python_package_name | package_name }}",
