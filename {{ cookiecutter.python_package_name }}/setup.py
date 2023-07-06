@@ -1,6 +1,6 @@
 """Installer for the {{ cookiecutter.python_package_name }} package."""
 from pathlib import Path
-from setuptools import find_packages
+from setuptools import find_namespace_packages
 from setuptools import setup
 
 
@@ -42,9 +42,7 @@ setup(
         "Tracker": "https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.python_package_name }}/issues",
     },
     license="GPL version 2",
-    packages=find_packages("src", exclude=["ez_setup"]),
-    namespace_packages=["{{ cookiecutter.github_organization }}"],
-    package_dir={"": "src"},
+    packages=find_namespace_packages("src", include=["{{ cookiecutter.github_organization }}.*"]),
     include_package_data=True,
     zip_safe=False,
     python_requires=">=3.8",
