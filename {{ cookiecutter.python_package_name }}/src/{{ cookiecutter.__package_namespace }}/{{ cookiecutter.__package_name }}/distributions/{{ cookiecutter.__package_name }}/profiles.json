@@ -2,10 +2,15 @@
   "base": [
     "plone.app.contenttypes:default",
     "plone.app.caching:default",
+    "plone.restapi:default",
+    "plone.volto:default",
+    {%- if cookiecutter.include_features == '0' %}
+    "plonetheme.barceloneta:default"
+    {%- endif %}
+    {%- if cookiecutter.include_features == '1' %}
     "plonetheme.barceloneta:default",
     "{{ cookiecutter.python_package_name }}:default"
+    {%- endif %}
   ],
-  "content": [
-    "{{ cookiecutter.python_package_name }}:initial"
-  ]
+  "content": []
 }

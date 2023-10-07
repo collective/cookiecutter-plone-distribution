@@ -14,9 +14,11 @@ long_description = f"""
 setup(
     name="{{ cookiecutter.python_package_name }}",
     version="1.0.0a1",
-    description="{{ cookiecutter.distribution_title }} configuration package.",
+    description="{{ cookiecutter.description }}.",
     long_description=long_description,
+    long_description_content_type="text/markdown",
     classifiers=[
+        "Development Status :: 3 - Alpha",
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: Addon",
@@ -41,6 +43,7 @@ setup(
     },
     license="GPL version 2",
     packages=find_packages("src", exclude=["ez_setup"]),
+    namespace_packages=["{{ cookiecutter.__package_namespace }}"],
     package_dir={"": "src"},
     include_package_data=True,
     zip_safe=False,

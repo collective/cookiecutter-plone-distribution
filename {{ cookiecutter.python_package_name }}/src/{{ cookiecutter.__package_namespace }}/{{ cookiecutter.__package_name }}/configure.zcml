@@ -10,15 +10,14 @@
       package="Products.CMFCore"
       file="permissions.zcml"
       />
-  <include
-      package="plone.behavior"
-      file="meta.zcml"
-      />
 
   <include file="dependencies.zcml" />
-
   <include file="distributions.zcml" />
-
+  {%- if cookiecutter.include_features == '1' %}
   <include file="profiles.zcml" />
+
+  <include package=".indexers" />
+  <include package=".vocabularies" />
+  {%- endif %}
 
 </configure>

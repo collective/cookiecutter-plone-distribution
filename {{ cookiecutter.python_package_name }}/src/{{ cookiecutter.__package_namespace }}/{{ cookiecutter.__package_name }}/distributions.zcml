@@ -9,6 +9,8 @@
       name="{{ cookiecutter.__package_name }}"
       title="{{ cookiecutter.distribution_title }}"
       description="{{ cookiecutter.description }}"
+      pre_handler=".handlers.pre_handler"
+      post_handler=".handlers.post_handler"
       />
 
 </configure>
