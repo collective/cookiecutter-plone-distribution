@@ -11,6 +11,9 @@
       description="{{ cookiecutter.description }}"
       pre_handler=".handlers.pre_handler"
       post_handler=".handlers.post_handler"
+      {%- if cookiecutter.headless == '0' %}
+      headless="false"
+      {%- endif %}
       />
 
 </configure>

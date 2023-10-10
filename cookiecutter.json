@@ -1,6 +1,10 @@
 {
   "distribution_title": "My Plone Distribution",
   "description": "A new Plone Distribution",
+  "headless": [
+    "1",
+    "0"
+  ],
   "author": "Plone Community",
   "email": "collective@plone.org",
   "github_organization": "collective",
@@ -28,6 +32,11 @@
   "__prompts__": {
     "distribution_title": "Distribution Title",
     "description": "A short description of your distribution",
+    "headless": {
+      "__prompt__": "Is this a headless distribution?",
+      "1": "Yes",
+      "0": "No"
+    },
     "github_organization": "GitHub Username or Organization",
     "python_package_name": "Python package name",
     "author": "Author",
