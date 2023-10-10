@@ -3,7 +3,7 @@
 # See the inline comments on how to expand/tweak this configuration file
 [meta]
 template = "default"
-commit-id = "7983e3d9"
+commit-id = "25d2fa7f"
 
 [pyproject]
 codespell_skip = "*.min.js"
@@ -14,5 +14,6 @@ dependencies_mappings = [
     ]
 
 [tox]
+use_mxdev = true
 test_runner = "pytest"
 test_path = "/tests"
