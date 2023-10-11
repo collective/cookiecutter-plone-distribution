@@ -51,7 +51,7 @@ setup(
     install_requires=[
         "setuptools",
         "Plone",
-        "plone.distribution",
+        "plone.distribution>=1.0.0b2",
         "plone.api",
     ],
     extras_require={
