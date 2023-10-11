@@ -34,9 +34,10 @@ ROOT_FILES = [
 
 PKG_SRC_FILES = [
     "__init__.py",
-    "distributions/{package_name}/content/content.json",
+    "distributions/{package_name}/content/items/1.json",
+    "distributions/{package_name}/content/items/2.json",
+    "distributions/{package_name}/content/items/3.json",
     "distributions/{package_name}/content/ordering.json",
-    "distributions/{package_name}/content/portal.json",
     "distributions/{package_name}/image.png",
     "distributions/{package_name}/profiles.json",
     "distributions/{package_name}/schema.json_example",
